@@ -36,6 +36,17 @@ Crie uma aplicação web para gerenciar uma Lista de Tarefas. A aplicação deve
 
 A API do projeto WFKeevo foi implementado em CSharp, ASP .NET e a metodologia utilizada para implementação foi na arquitetura (metodologia) REST.
 
+O banco de dados Postgre esta instalado no Docker, o conteiner é horatrabalhada.
+
+Carregar o Docker Desktop, depois no Windows PowerShell digitar o comando abaixo que cria o banco de dados num conteiner do Docker:
+
+docker run --name horatrabalhada -p 5455:5432 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=password -e POSTGRES_DB=horatrabalhadadocker -d postgres
+
+No projeto Keevo no CSharp configurar a string de conexão abaixo no arquivo "appsettings.Development.json":
+
+"ConnectionPostgres": "Server=localhost; Port=5455; User Id=admin; Password=password; Database=horatrabalhadadocker"
+
+
 ![DER - Keevo Lançamento de Horas Trabalhadas](/Imagens/DER_Keevo.png)
 
 ```
