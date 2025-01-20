@@ -1,5 +1,7 @@
 ﻿using FrontKeevo.Models;
 using FrontKeevo.Services;
+using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,19 +11,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FrontKeevo.Views
 {
     public partial class FrmTarefa : Form
     {
         private PaginacaoResponse<Tarefa> paginacao = null;
+        private bool novo = false;
 
+        // Formulário construtor
         public FrmTarefa()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
             atualizaDados();
         }
 
+        private void verificaBotoes()
+        {
+            buttonSalvar.Enabled = false;
+            buttonCancelar.Enabled = false;
+            buttonNovo.Enabled = permissaoUsuario(); // Todos usuários podem incluir tarefa
+            buttonAlterar.Enabled = false; // Habilitar se tiver registro
+            buttonExcluir.Enabled = false; // Habilitar se tiver registro
+            buttonPrimeira.Enabled = false; // Habilitar se tiver registro
+            buttonAnterior.Enabled = false; // Habilitar se tiver registro
+            buttonProxima.Enabled = false; // Habilitar se tiver registro
+            buttonUltima.Enabled = false; // Habilitar se tiver registro
+            buttonPesquisar.Enabled = true;
+
+            if (paginacao.TotalLinhas > 0)
+            {
+                buttonPrimeira.Enabled = true;
+                buttonAnterior.Enabled = true;
+                buttonProxima.Enabled = true;
+                buttonUltima.Enabled = true;
+                buttonAlterar.Enabled = permissaoUsuario();
+                buttonExcluir.Enabled = permissaoUsuario();
+            }
+        }
+
+        private bool permissaoUsuario()
+        {
+            if (UsuarioSession.Funcao == "Administrador" || UsuarioSession.Funcao == "Gerente" || UsuarioSession.Funcao == "Empregado")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void habilitaCampos()
+        {
+            if (novo)
+            {
+                textBoxTarCodigo.ReadOnly = false;
+                textBoxTarNome.ReadOnly = false;
+                textBoxTarCodigo.Clear();
+                textBoxTarNome.Clear();
+            } else
+            {
+                textBoxTarCodigo.ReadOnly = true;
+                textBoxTarNome.ReadOnly = false;
+            }
+        }
+
+        private void desabilitaCampos()
+        {
+            textBoxTarCodigo.ReadOnly = true;
+            textBoxTarNome.ReadOnly = true;
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -35,6 +95,7 @@ namespace FrontKeevo.Views
             paginacao = await TarefaServices.Paginacao(textBoxPesquisa.Text, skip, take, checkBoxOrdem.Checked);
             dataGridView1.DataSource = paginacao.Dados;
             atualizaCamposDetalhes();
+            verificaBotoes();
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
@@ -82,7 +143,7 @@ namespace FrontKeevo.Views
             if (paginacao.Skip < quantidadePaginas)
             {
                 paginacao.Skip++;
-                textBoxSkip.Text = quantidadePaginas.ToString();
+                textBoxSkip.Text = paginacao.Skip.ToString();
                 atualizaDados();
             }
         }
@@ -111,62 +172,119 @@ namespace FrontKeevo.Views
                 Tarefa tarefa = (Tarefa)dataGridView1.SelectedRows[0].DataBoundItem;
                 textBoxTarCodigo.Text = tarefa.TarCodigo.ToString();
                 textBoxTarNome.Text = tarefa.TarNome;
-                textBoxTarDataInicio.Text = tarefa.TarDataInicio.ToString();
-                textBoxTarDataFinal.Text = tarefa.TarDataFinal.ToString();
-                textBoxTarStatus.Text = tarefa.TarStatus.ToString();
+                dateTimePickerDataInicial.Text = tarefa.TarDataInicio.ToString();
+                dateTimePickerDataFinal.Text = tarefa.TarDataFinal.ToString();
+                comboBoxTarStatus.Text = tarefa.TarStatus.ToString();
+                int index = comboBoxTarStatus.FindString(tarefa.TarStatus.ToString());
+                comboBoxTarStatus.SelectedIndex = index;
             }
         }
 
         private void buttonNovo_Click(object sender, EventArgs e)
         {
+            novo = true;
+            habilitaBotoes();
+            habilitaCampos();
             tabControl1.SelectedTab = tabPage2;
-            textBoxTarCodigo.Clear();
-            textBoxTarNome.Clear();
-            textBoxTarDataInicio.Clear();
-            textBoxTarDataFinal.Clear();
-            textBoxTarStatus.Clear();
+            dateTimePickerDataInicial.Value = DateTime.Now.Date;
+            dateTimePickerDataFinal.Value = DateTime.Now.Date;
             textBoxTarCodigo.Focus();
-
+            comboBoxTarStatus.SelectedItem = "1-Incluida"; // Selecione o item específico como padrão
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage1;
             atualizaCamposDetalhes();
+            verificaBotoes();
+            desabilitaCampos();
         }
 
         private async void buttonSalvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxTarDataFinal.Text))
-            {
-                textBoxTarDataFinal.Text = textBoxTarDataInicio.Text;
-            }
+            string statusSelecionado = comboBoxTarStatus.SelectedItem.ToString();
+            string[] partes = statusSelecionado.Split('-');
+            int statusNumerico = int.Parse(partes[0]);
 
             if (int.TryParse(textBoxTarCodigo.Text, out int tarCodigo) &&
-               DateTime.TryParse(textBoxTarDataInicio.Text, out DateTime tarDataInicio) &&
-               DateTime.TryParse(textBoxTarDataFinal.Text, out DateTime tarDataFinal) &&
-               int.TryParse(textBoxTarStatus.Text, out int tarStatus))
+               DateTime.TryParse(dateTimePickerDataInicial.Text, out DateTime tarDataInicio) &&
+               DateTime.TryParse(dateTimePickerDataFinal.Text, out DateTime tarDataFinal))
             {
                 Tarefa tarefa = new Tarefa()
                 {
                     TarCodigo = tarCodigo,
                     TarNome = textBoxTarNome.Text,
-                    TarDataInicio = tarDataInicio.ToUniversalTime(),
-                    TarDataFinal = tarDataFinal.ToUniversalTime(),
-                    TarStatus = tarStatus
+                    TarDataInicio = DateTime.SpecifyKind(new DateTime(tarDataInicio.Year, tarDataInicio.Month, tarDataInicio.Day, 0, 0, 0), DateTimeKind.Utc),
+                    TarDataFinal = DateTime.SpecifyKind(new DateTime(tarDataFinal.Year, tarDataFinal.Month, tarDataFinal.Day, 0, 0, 0), DateTimeKind.Utc),
+                    TarStatus = statusNumerico
                 };
 
-                var resultado = await TarefaServices.PostTarefa(tarefa);
+                var resultado = novo ? await TarefaServices.PostTarefa(tarefa) : await TarefaServices.PutTarefa(tarefa);
 
                 if (resultado)
                 {
                     tabControl1.SelectedTab = tabPage1;
-                    atualizaCamposDetalhes();
+                    atualizaDados();
+                    desabilitaCampos();
                 }
             } else
             {
                 // Tratamento para quando a conversão falha
                 MessageBox.Show("Erro ao converter os valores. Verifique os formatos.");
+            }
+        }
+
+        private void habilitaBotoes()
+        {
+            buttonNovo.Enabled = false;
+            buttonAlterar.Enabled = false;
+            buttonExcluir.Enabled = false;
+            buttonSalvar.Enabled = true;
+            buttonCancelar.Enabled = true;
+            buttonPrimeira.Enabled = false;
+            buttonAnterior.Enabled = false;
+            buttonProxima.Enabled = false;
+            buttonUltima.Enabled = false;
+            buttonPesquisar.Enabled = false;
+        }
+
+            private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            novo = false;
+            habilitaBotoes();
+            habilitaCampos();
+            tabControl1.SelectedTab = tabPage2;
+            textBoxTarCodigo.Focus();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            // Verificar se tem informação no grid
+            if (dataGridView1.SelectedRows.Count > 0) 
+            {
+                Tarefa tarefa = (Tarefa) dataGridView1.SelectedRows[0].DataBoundItem;
+                DialogResult result = 
+                    MessageBox.Show(
+                    null,
+                    $"Deseja excluir a tarefa {tarefa.TarCodigo.ToString()} {tarefa.TarNome}",
+                    "Lançamento de Horas",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Question
+                    );
+                if (result == DialogResult.OK) 
+                {
+                    var resultado = await TarefaServices.DeleteTarefa(tarefa.TarCodigo);
+                    if (resultado)
+                    {
+                        tabControl1.SelectedTab = tabPage1;
+                        atualizaDados();
+                    }
+                }
             }
         }
     }

@@ -11,7 +11,7 @@ namespace FrontKeevo
         public FrmPrincipal()
         {
             InitializeComponent();
-            labelUsuario.Text = "Usuário: " + UsuarioSession.Nome;
+            labelUsuario.Text = "Usuário: " + UsuarioSession.Nome + " (" + UsuarioSession.Funcao + ")";
             verificaPermissoesUsuario();
         }
 

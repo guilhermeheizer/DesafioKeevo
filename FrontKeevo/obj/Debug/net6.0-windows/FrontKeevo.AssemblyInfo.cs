@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FrontKeevo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bdea95abacc0a6f894ee3680f72a1ce9f2dce32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4270c6f6390e5b5c7fc53c35a3eef5b533caefbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("FrontKeevo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FrontKeevo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

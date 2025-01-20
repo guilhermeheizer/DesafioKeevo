@@ -49,6 +49,13 @@ namespace WFKeevo.Controllers
         [Authorize(Roles = "Gerente,Empregado,Administrador")]
         public async Task<IActionResult> PostTarefa([FromBody] Tarefa tarefa)
         {
+            var tarefaExiste = await _context.Tarefa.FindAsync(tarefa.TarCodigo);
+
+            if (tarefaExiste != null)
+            {
+                return Ok($"Tarefa informada já cadastrada: {tarefa.TarCodigo}");
+            }
+
             try
             {
                 await _context.Tarefa.AddAsync(tarefa);
@@ -78,10 +85,15 @@ namespace WFKeevo.Controllers
         {
             try
             {
-                var tarefaItem = await _context.Tarefa.FindAsync(tarefa.TarCodigo);
-                if (tarefa.TarCodigo == tarefaItem.TarCodigo && tarefaItem.TarCodigo != 0)
+                var tarefaItem = await _context.Tarefa.AsNoTracking().FirstOrDefaultAsync(t => t.TarCodigo == tarefa.TarCodigo);
+                if (tarefaItem != null)
                 {
-                    _context.Tarefa.Update(tarefa);
+                    tarefaItem.TarNome = tarefa.TarNome;
+                    tarefaItem.TarDataInicio = tarefa.TarDataInicio;
+                    tarefaItem.TarDataFinal = tarefa.TarDataFinal;
+                    tarefaItem.TarStatus = tarefa.TarStatus;
+
+                    _context.Tarefa.Update(tarefaItem);
                     var valor = await _context.SaveChangesAsync();
 
                     if (valor == 1)
@@ -112,10 +124,12 @@ namespace WFKeevo.Controllers
         {
             try
             {
-                Lancto lancto = await _context.Lancto.FindAsync(tarCodigo);
-                var tarefa = await _context.Tarefa.FindAsync(tarCodigo);
+                //Lancto lancto = await _context.Lancto.FindAsync(tarCodigo);
+                Lancto lancto = await _context.Lancto.AsNoTracking().FirstOrDefaultAsync(t => t.TarCodigo == tarCodigo);
+                //var tarefa = await _context.Tarefa.FindAsync(tarCodigo);
+                var tarefa = await _context.Tarefa.AsNoTracking().FirstOrDefaultAsync(t => t.TarCodigo == tarCodigo);
 
-                if ( tarefa == null)
+                if (tarefa == null)
                 {
                     return NotFound($"Tarefa informada não existe: {tarCodigo}");
                 }
@@ -168,11 +182,11 @@ namespace WFKeevo.Controllers
                 return BadRequest($"Erro na consulta de Tarefa. Exceção: {e.Message}");
             }
         }
-        // param name="valor"></param>
 
         /// <summary>
         /// Busca tarefa por nome
         /// </summary>
+        /// param name="valor"></param>
         /// <returns></returns>
         [HttpGet("Pesquisa")]
         public async Task<IActionResult> GetTarefaPesquisa([FromQuery] string valor)
@@ -200,7 +214,7 @@ namespace WFKeevo.Controllers
         /// <param name="ordemDesc"></param>
         /// <returns></returns>
         [HttpGet("Paginacao")]
-        public async Task<IActionResult> GetEstadoPaginacao([FromQuery] string valor, int skip, int take, bool ordemDesc)
+        public async Task<IActionResult> GetEstadoPaginacao([FromQuery] string? valor, int skip, int take, bool ordemDesc)
         {
             try
             {
@@ -222,8 +236,9 @@ namespace WFKeevo.Controllers
                 long qtde = query.Count();
 
                 // Apply pagination
+
                 var lista = query
-                    .Skip(skip)
+                    .Skip((skip - 1) * take)
                     .Take(take)
                     .ToList();
 

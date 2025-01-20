@@ -140,3 +140,7 @@ INSERT INTO public."Tarefa"("TarCodigo", "TarNome", "TarDataInicio", "TarDataFin
 (101, 'Carol Martins Aula', '2019-03-01 09:21:11', null, 2),
 (102, 'Carol Martins Exercicio', '2019-03-01 09:21:11', null, 2);
 
+UPDATE public."Tarefa"
+SET "TarDataFinal"= "TarDataInicio"
+where "TarStatus" <> 3;
+

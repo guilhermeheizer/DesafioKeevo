@@ -180,7 +180,7 @@ namespace FrontKeevo.Services
         }
 
         // Exclusão
-        public async static Task<bool> DeleteTarefa(string tarCodigo)
+        public async static Task<bool> DeleteTarefa(int tarCodigo)
         {
             bool resultado = false;
 

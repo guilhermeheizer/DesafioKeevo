@@ -41,7 +41,6 @@
             label1 = new System.Windows.Forms.Label();
             buttonUltima = new System.Windows.Forms.Button();
             buttonProxima = new System.Windows.Forms.Button();
-            button1 = new System.Windows.Forms.Button();
             buttonAnterior = new System.Windows.Forms.Button();
             buttonPrimeira = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
@@ -58,16 +57,21 @@
             tabPage1 = new System.Windows.Forms.TabPage();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             tabPage2 = new System.Windows.Forms.TabPage();
-            textBoxTarStatus = new System.Windows.Forms.TextBox();
+            comboBoxTarStatus = new System.Windows.Forms.ComboBox();
+            dateTimePickerDataFinal = new System.Windows.Forms.DateTimePicker();
+            dateTimePickerDataInicial = new System.Windows.Forms.DateTimePicker();
             label7 = new System.Windows.Forms.Label();
-            textBoxTarDataFinal = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
-            textBoxTarDataInicio = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
             textBoxTarNome = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             textBoxTarCodigo = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
+            Tarefa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            DataInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            DataFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -141,7 +145,6 @@
             panel4.Controls.Add(label1);
             panel4.Controls.Add(buttonUltima);
             panel4.Controls.Add(buttonProxima);
-            panel4.Controls.Add(button1);
             panel4.Controls.Add(buttonAnterior);
             panel4.Controls.Add(buttonPrimeira);
             panel4.Dock = System.Windows.Forms.DockStyle.Left;
@@ -212,19 +215,6 @@
             buttonProxima.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             buttonProxima.UseVisualStyleBackColor = true;
             buttonProxima.Click += buttonProxima_Click;
-            // 
-            // button1
-            // 
-            button1.Image = (System.Drawing.Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            button1.Location = new System.Drawing.Point(131, 25);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(113, 44);
-            button1.TabIndex = 1;
-            button1.Text = "Anterior";
-            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // buttonAnterior
             // 
@@ -341,6 +331,7 @@
             buttonExcluir.Text = "Excluir";
             buttonExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             buttonExcluir.UseVisualStyleBackColor = true;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // buttonAlterar
             // 
@@ -353,6 +344,7 @@
             buttonAlterar.Text = "Alterar";
             buttonAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             buttonAlterar.UseVisualStyleBackColor = true;
+            buttonAlterar.Click += buttonAlterar_Click;
             // 
             // buttonNovo
             // 
@@ -395,6 +387,7 @@
             // 
             dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Tarefa, Nome, DataInicio, DataFim, Status });
             dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             dataGridView1.GridColor = System.Drawing.Color.DarkGray;
             dataGridView1.Location = new System.Drawing.Point(3, 3);
@@ -408,11 +401,11 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(textBoxTarStatus);
+            tabPage2.Controls.Add(comboBoxTarStatus);
+            tabPage2.Controls.Add(dateTimePickerDataFinal);
+            tabPage2.Controls.Add(dateTimePickerDataInicial);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(textBoxTarDataFinal);
             tabPage2.Controls.Add(label6);
-            tabPage2.Controls.Add(textBoxTarDataInicio);
             tabPage2.Controls.Add(label5);
             tabPage2.Controls.Add(textBoxTarNome);
             tabPage2.Controls.Add(label4);
@@ -425,13 +418,34 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Detalhes";
             tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Click += tabPage2_Click;
             // 
-            // textBoxTarStatus
+            // comboBoxTarStatus
             // 
-            textBoxTarStatus.Location = new System.Drawing.Point(115, 196);
-            textBoxTarStatus.Name = "textBoxTarStatus";
-            textBoxTarStatus.Size = new System.Drawing.Size(49, 27);
-            textBoxTarStatus.TabIndex = 10;
+            comboBoxTarStatus.FormattingEnabled = true;
+            comboBoxTarStatus.Items.AddRange(new object[] { "1-Incluida", "2-Executando", "3-Finalizada", "4-Cancelada" });
+            comboBoxTarStatus.Location = new System.Drawing.Point(115, 193);
+            comboBoxTarStatus.Name = "comboBoxTarStatus";
+            comboBoxTarStatus.Size = new System.Drawing.Size(116, 28);
+            comboBoxTarStatus.TabIndex = 13;
+            // 
+            // dateTimePickerDataFinal
+            // 
+            dateTimePickerDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dateTimePickerDataFinal.Location = new System.Drawing.Point(115, 147);
+            dateTimePickerDataFinal.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
+            dateTimePickerDataFinal.Name = "dateTimePickerDataFinal";
+            dateTimePickerDataFinal.Size = new System.Drawing.Size(124, 27);
+            dateTimePickerDataFinal.TabIndex = 12;
+            // 
+            // dateTimePickerDataInicial
+            // 
+            dateTimePickerDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dateTimePickerDataInicial.Location = new System.Drawing.Point(115, 102);
+            dateTimePickerDataInicial.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
+            dateTimePickerDataInicial.Name = "dateTimePickerDataInicial";
+            dateTimePickerDataInicial.Size = new System.Drawing.Size(124, 27);
+            dateTimePickerDataInicial.TabIndex = 11;
             // 
             // label7
             // 
@@ -442,13 +456,6 @@
             label7.TabIndex = 9;
             label7.Text = "Status";
             // 
-            // textBoxTarDataFinal
-            // 
-            textBoxTarDataFinal.Location = new System.Drawing.Point(115, 147);
-            textBoxTarDataFinal.Name = "textBoxTarDataFinal";
-            textBoxTarDataFinal.Size = new System.Drawing.Size(175, 27);
-            textBoxTarDataFinal.TabIndex = 8;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -457,13 +464,6 @@
             label6.Size = new System.Drawing.Size(76, 20);
             label6.TabIndex = 7;
             label6.Text = "Data Final";
-            // 
-            // textBoxTarDataInicio
-            // 
-            textBoxTarDataInicio.Location = new System.Drawing.Point(115, 102);
-            textBoxTarDataInicio.Name = "textBoxTarDataInicio";
-            textBoxTarDataInicio.Size = new System.Drawing.Size(175, 27);
-            textBoxTarDataInicio.TabIndex = 5;
             // 
             // label5
             // 
@@ -505,6 +505,46 @@
             label3.Size = new System.Drawing.Size(49, 20);
             label3.TabIndex = 0;
             label3.Text = "Tarefa";
+            // 
+            // Tarefa
+            // 
+            Tarefa.DataPropertyName = "TarCodigo";
+            Tarefa.HeaderText = "Tarefa";
+            Tarefa.MinimumWidth = 6;
+            Tarefa.Name = "Tarefa";
+            Tarefa.Width = 60;
+            // 
+            // Nome
+            // 
+            Nome.DataPropertyName = "TarNome";
+            Nome.HeaderText = "Nome";
+            Nome.MinimumWidth = 6;
+            Nome.Name = "Nome";
+            Nome.Width = 500;
+            // 
+            // DataInicio
+            // 
+            DataInicio.DataPropertyName = "TarDataInicio";
+            DataInicio.HeaderText = "Data Início";
+            DataInicio.MinimumWidth = 6;
+            DataInicio.Name = "DataInicio";
+            DataInicio.Width = 125;
+            // 
+            // DataFim
+            // 
+            DataFim.DataPropertyName = "TarDataFim";
+            DataFim.HeaderText = "Data Fim";
+            DataFim.MinimumWidth = 6;
+            DataFim.Name = "DataFim";
+            DataFim.Width = 125;
+            // 
+            // Status
+            // 
+            Status.DataPropertyName = "TarStatus";
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.Width = 55;
             // 
             // FrmTarefa
             // 
@@ -551,7 +591,6 @@
         private System.Windows.Forms.Button buttonAnterior;
         private System.Windows.Forms.Button buttonUltima;
         private System.Windows.Forms.Button buttonProxima;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxSkip;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxTake;
@@ -571,11 +610,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxTarNome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxTarDataInicio;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxTarStatus;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxTarDataFinal;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDataInicial;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDataFinal;
+        private System.Windows.Forms.ComboBox comboBoxTarStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tarefa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataFim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
