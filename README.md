@@ -77,7 +77,7 @@ docker run --name horatrabalhada -p 5455:5432 -e POSTGRES_USER=admin -e POSTGRES
    - Recompilar a solução e depois executar debugando.
    - A primeira tela é a de login, informe em login: anamaria e senha: anamaria
    - Depois carregar a tela pricipal
-   - Desenvolvi somente a tela da Tarefa e faltou implementar a alteração e exclusão.
+   - A manutenção tela da Tarefa foi concluída.
 
 
 
