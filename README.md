@@ -80,9 +80,9 @@ O botão "Nova Senha" reseta a senha, e fica igual ao login.
 
 A opção de alterar a senha pelo próprio usuário não foi desenvolvida.
 
-Ao cadstrar ou alterar um usuário, pode-se atribuir as funções: "Administrador", "Gerente", "Empregado" ou "Operador".
+Ao cadastrar ou alterar um usuário, pode-se atribuir as funções: "Administrador", "Gerente", "Empregado" ou "Operador".
 
-![Manutenção Usuário](/Imagens/03_01_UsuarioManutencao.png)
+![Manutenção Usuário](/Imagens/03_01_UsuarioManutecao.png)
 ![Inclusão Usuário](/Imagens/03_02_UsuarioInclusao.png)
 ![Alteração Usuário](/Imagens/03_03_UsuarioAlteracao.png)
 ![Detalhes Usuário](/Imagens/03_04_UsuarioDetalhes.png)
@@ -179,14 +179,14 @@ Cooperaram com meu projeto e agradeço pela ajuda:
 
 - Keevo Software - https://www.linkedin.com/company/keevosoftware/posts/?feedView=all A Keevo adota uma excelente prática ao solicitar que candidatos às vagas de desenvolvedor realizem um desafio técnico para avaliar suas habilidades na construção de aplicações. Esse desafio me inspirou a continuar evoluindo com meu projeto.
 
-
-
-
-
-
 ## Autor
 
 - [@guilhermeheizer](https://www.github.com/guilhermeheizer)
+
+## Considerações
+Você pode realizar um Fork do projeto, e ter a liberdade de realizar modificações e pode distribuir o projeto para outras pessoas.
+
+Caso queira sugerir ou relatar bugs, favor enviar email para guilhermeheizer@gmail.com
 
 
 
