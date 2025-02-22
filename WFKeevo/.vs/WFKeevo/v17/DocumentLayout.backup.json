@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "D:\\DesafioKeevo\\WFKeevo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\modulo\\mntlanctomodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:modulo\\mntlanctomodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\controllers\\mntlanctocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:controllers\\mntlanctocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\models\\mntlanctomodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:models\\mntlanctomodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\controllers\\tarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:controllers\\tarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\controllers\\mntlanctocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:controllers\\mntlanctocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\controllers\\lanctocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:controllers\\lanctocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\models\\tarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|solutionrelative:models\\tarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42B951CD-824F-4873-B787-B1FFC1F0F24E}|WFKeevo.csproj|d:\\desafiokeevo\\wfkeevo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,64 +34,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MntLanctoController.cs",
+              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\MntLanctoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MntLanctoController.cs",
+              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\MntLanctoController.cs",
+              "RelativeToolTip": "Controllers\\MntLanctoController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAA1wBoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T00:07:02.531Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-22T20:07:16.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
               "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAywN4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T21:22:29.766Z"
+              "WhenOpened": "2025-02-20T17:21:51.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tarefa.cs",
+              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Models\\Tarefa.cs",
+              "RelativeDocumentMoniker": "Models\\Tarefa.cs",
+              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Models\\Tarefa.cs",
+              "RelativeToolTip": "Models\\Tarefa.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvyUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T16:45:48.113Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MntLanctoController.cs",
-              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\MntLanctoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MntLanctoController.cs",
-              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\MntLanctoController.cs",
-              "RelativeToolTip": "Controllers\\MntLanctoController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAMwEgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T00:07:02.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MntLanctoModulo.cs",
               "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Modulo\\MntLanctoModulo.cs",
               "RelativeDocumentMoniker": "Modulo\\MntLanctoModulo.cs",
               "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Modulo\\MntLanctoModulo.cs",
               "RelativeToolTip": "Modulo\\MntLanctoModulo.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAIAywEgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAmwMYAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T02:37:16.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MntLanctoModels.cs",
-              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Models\\MntLanctoModels.cs",
-              "RelativeDocumentMoniker": "Models\\MntLanctoModels.cs",
-              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Models\\MntLanctoModels.cs",
-              "RelativeToolTip": "Models\\MntLanctoModels.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAywCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T02:29:49.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -104,30 +114,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T14:12:27.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LanctoController.cs",
-              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\LanctoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LanctoController.cs",
-              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\LanctoController.cs",
-              "RelativeToolTip": "Controllers\\LanctoController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAUwJYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T22:03:59.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TarefaController.cs",
-              "DocumentMoniker": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\TarefaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TarefaController.cs",
-              "ToolTip": "D:\\DesafioKeevo\\WFKeevo\\Controllers\\TarefaController.cs",
-              "RelativeToolTip": "Controllers\\TarefaController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAywFYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T22:03:29.821Z"
             }
           ]
         }

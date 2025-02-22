@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WFKeevo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ea11730f3f201d1bb44a86d2865b63a007618bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("WFKeevo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WFKeevo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

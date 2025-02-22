@@ -50,3 +50,4 @@ D:\DesafioKeevo\FrontKeevo\obj\Debug\net6.0-windows\FrontKeevo.pdb
 D:\DesafioKeevo\FrontKeevo\obj\Debug\net6.0-windows\FrontKeevo.genruntimeconfig.cache
 D:\DesafioKeevo\FrontKeevo\obj\Debug\net6.0-windows\ref\FrontKeevo.dll
 D:\DesafioKeevo\FrontKeevo\obj\Debug\net6.0-windows\FrontKeevo.Views.FrmHelpTarefa.resources
+D:\DesafioKeevo\FrontKeevo\obj\Debug\net6.0-windows\FrontKeevo.sourcelink.json

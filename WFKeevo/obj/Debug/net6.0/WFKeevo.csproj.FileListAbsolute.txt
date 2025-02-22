@@ -56,3 +56,4 @@ D:\DesafioKeevo\WFKeevo\obj\Debug\net6.0\WFKeevo.pdb
 D:\DesafioKeevo\WFKeevo\obj\Debug\net6.0\WFKeevo.genruntimeconfig.cache
 D:\DesafioKeevo\WFKeevo\obj\Debug\net6.0\ref\WFKeevo.dll
 D:\DesafioKeevo\WFKeevo\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\DesafioKeevo\WFKeevo\obj\Debug\net6.0\WFKeevo.sourcelink.json

@@ -457,8 +457,6 @@ namespace FrontKeevo.Views
             textBoxLandId.ReadOnly = true;
             textBoxUsuarioId.ReadOnly = true;
             textBoxNome.ReadOnly = true;
-            textBoxUsuarioId.Text = UsuarioSession.Id.ToString();
-            textBoxNome.Text = UsuarioSession.Nome;
             if (novo)
             {
                 textBoxLandId.Text = novoLanId.ToString();
@@ -468,6 +466,8 @@ namespace FrontKeevo.Views
                 textBoxMinutoInicio.Clear();
                 textBoxHoraFinal.Clear();
                 textBoxMinutoFinal.Clear();
+                textBoxUsuarioId.Text = UsuarioSession.Id.ToString();
+                textBoxNome.Text = UsuarioSession.Nome;
             } else
             {
                 checkBoxInicializaAgora.Enabled = false;

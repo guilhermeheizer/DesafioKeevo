@@ -15,20 +15,8 @@
       "RelativeMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|solutionrelative:services\\lanctoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|d:\\desafiokeevo\\frontkeevo\\views\\frmhelptarefa.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|solutionrelative:views\\frmhelptarefa.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|d:\\desafiokeevo\\frontkeevo\\views\\frmtarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|solutionrelative:views\\frmtarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|d:\\desafiokeevo\\frontkeevo\\views\\frmusuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|solutionrelative:views\\frmusuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|D:\\DesafioKeevo\\FrontKeevo\\views\\frmtarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|solutionrelative:views\\frmtarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67D76EF1-334D-42EF-ACCC-5D41B27507EB}|FrontKeevo.csproj|D:\\DesafioKeevo\\FrontKeevo\\views\\frmlancto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "FrmUsuario.Designer.cs",
               "DocumentMoniker": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmUsuario.Designer.cs",
               "RelativeDocumentMoniker": "Views\\FrmUsuario.Designer.cs",
@@ -58,45 +46,7 @@
               "RelativeToolTip": "Views\\FrmUsuario.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T00:14:12.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmTarefa.cs",
-              "DocumentMoniker": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmTarefa.cs",
-              "RelativeDocumentMoniker": "Views\\FrmTarefa.cs",
-              "ToolTip": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmTarefa.cs",
-              "RelativeToolTip": "Views\\FrmTarefa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T00:13:24.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmTarefa.cs [Projeto]",
-              "DocumentMoniker": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmTarefa.cs",
-              "RelativeDocumentMoniker": "Views\\FrmTarefa.cs",
-              "ToolTip": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmTarefa.cs [Projeto]",
-              "RelativeToolTip": "Views\\FrmTarefa.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T00:13:00.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmHelpTarefa.Designer.cs",
-              "DocumentMoniker": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmHelpTarefa.Designer.cs",
-              "RelativeDocumentMoniker": "Views\\FrmHelpTarefa.Designer.cs",
-              "ToolTip": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmHelpTarefa.Designer.cs",
-              "RelativeToolTip": "Views\\FrmHelpTarefa.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T00:12:17.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T00:14:12.542Z"
             },
             {
               "$type": "Document",
@@ -106,14 +56,14 @@
               "RelativeDocumentMoniker": "Views\\FrmLancto.cs",
               "ToolTip": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmLancto.cs",
               "RelativeToolTip": "Views\\FrmLancto.cs",
-              "ViewState": "AgIAABMCAAAAAAAAAAAMwCECAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAMEBAAAAAAAAAAAgwNMBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T18:39:46.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "FrmLancto.cs [Projeto]",
               "DocumentMoniker": "D:\\DesafioKeevo\\FrontKeevo\\Views\\FrmLancto.cs",
               "RelativeDocumentMoniker": "Views\\FrmLancto.cs",
@@ -132,8 +82,7 @@
               "RelativeToolTip": "Models\\ConsisteLancto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T02:10:47.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T02:10:47.514Z"
             },
             {
               "$type": "Document",
@@ -145,8 +94,7 @@
               "RelativeToolTip": "Services\\LanctoServices.cs",
               "ViewState": "AgIAAKYAAAAAAAAAAAAMwKoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T03:08:22.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T03:08:22.275Z"
             }
           ]
         }
