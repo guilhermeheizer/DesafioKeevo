@@ -3,10 +3,10 @@
 
 ## Descrição 
 O projeto permite realizar o lançamento de horas
-trabalhdas ou de estudos com a finalidade de saber para cada usuário as horas lançadas para as tarefas num determinado período.
+trabalhadas ou de estudos com a finalidade de saber para cada usuário as horas lançadas para as tarefas num determinado período.
 
 ## Requisitos Funcionais
-O projeto é constituido de 3 tabelas, duas para cadastrar os usuários e as tarefas e uma para a armazenar as horas trabalhdas ou de estudo dos usuários.
+O projeto é constituído de 3 tabelas, duas para cadastrar os usuários e as tarefas e uma para a armazenar as horas trabalhdas ou de estudo dos usuários.
 
 - Tabela de usuários: criar as funcionalidades de consulta por paginação, inclusão, alteração e exclusão.
 - Tabela de tarefas: criar as funcionalidades de consulta por paginação, inclusão, alteração e exclusão.
@@ -22,7 +22,7 @@ O projeto é constituido de 3 tabelas, duas para cadastrar os usuários e as tar
 - Uso do Docker para o banco de dados
 
 ## Banco de dados no Docker
-O banco de dados Postgre esta instalado no Docker. Carregar o Docker Desktop, depois no Windows PowerShell digitar o comando abaixo que cria o banco de dados num conteiner do Docker:
+O banco de dados Postgres esta instalado no Docker. Carregar o Docker Desktop, depois no Windows PowerShell digitar o comando abaixo que cria o banco de dados num conteiner do Docker:
 
 docker run --name horatrabalhada -p 5455:5432 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=password -e POSTGRES_DB=horatrabalhadadocker -d postgres
 
@@ -31,7 +31,7 @@ Preparei um script com insert das tabelas. Portanto abrir o Postgres no Docker o
 
 Na tabela Usuario tem o atributo "funcao" que pode ser  "Administrador", "Gerente", "Empregado" e "Operador".
 
-Criei o usuario "gama" com a função "Administrador" e para os usuários com esta função a senha na tela de login não é checada. Os demais usuários com as outras funções, a senha é igual ao login. 
+Criei o usuário "gama" com a função "Administrador" e para os usuários com esta função a senha na tela de login não é checada. Os demais usuários com as outras funções, a senha é igual ao login. 
 
 A primeira tela é a tela de login. São realizadas as consistências contra a tabela de Usuario e um token é gerado e checado toda vez que o Frontend realizar uma chamada de algum endpoint do projeto do Backend.
 
