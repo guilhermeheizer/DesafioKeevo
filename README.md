@@ -1,12 +1,12 @@
 
-# Lançamento de Horas Trabalhas ou de Estudo
+# Lançamento de Horas Trabalhadas ou de Estudo
 
 ## Descrição 
 O projeto permite realizar o lançamento de horas
 trabalhadas ou de estudos com a finalidade de saber para cada usuário as horas lançadas para as tarefas num determinado período.
 
 ## Requisitos Funcionais
-O projeto é constituído de 3 tabelas, duas para cadastrar os usuários e as tarefas e uma para a armazenar as horas trabalhdas ou de estudo dos usuários.
+O projeto é constituído de 3 tabelas, duas para cadastrar os usuários e as tarefas e uma para a armazenar as horas trabalhadas ou de estudo dos usuários.
 
 - Tabela de usuários: criar as funcionalidades de consulta por paginação, inclusão, alteração e exclusão.
 - Tabela de tarefas: criar as funcionalidades de consulta por paginação, inclusão, alteração e exclusão.
